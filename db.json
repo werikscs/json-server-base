@@ -1,4 +1,116 @@
 {
-  "users": [],
-  "animals": []
+  "users": [
+    {
+      "email": "joao@email.com",
+      "password": "$2a$10$MU/9zrAw1q0HfHIdpXg1sOXMQRkMerjz5Pe.EEQbEuXu9pSoJLHTO",
+      "name": "João da Silva",
+      "phone": "22998001100",
+      "type": "pessoa",
+      "avatar": "",
+      "id": 1
+    },
+    {
+      "email": "ong@email.com",
+      "password": "$2a$10$HIryiV4gLqyClQDZ3QsrZ.iSWGMkXQoBeVhCBWE2/L7H3i5c3Zg.K",
+      "name": "Abrigo do Norte",
+      "phone": "22998001100",
+      "type": "instituicao",
+      "cep": "28940000",
+      "moreInfo": "A instituição Abrigo do Norte foca em retirar os animais que estão morando nas ruas e prepará-los para receberem um novo lar.",
+      "avatar": "",
+      "id": 2
+    }
+  ],
+  "animals": [
+    {
+      "userId": 1,
+      "name": "fiona",
+      "species": "dog",
+      "sex": "f",
+      "size": "small",
+      "img": "https://uploaddeimagens.com.br/images/003/866/666/original/cao1_1.png",
+      "moreInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac nibh ut felis scelerisque finibus sit amet in tortor. ",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "name": "maxx",
+      "species": "dog",
+      "sex": "m",
+      "size": "medium",
+      "img": "https://uploaddeimagens.com.br/images/003/866/664/original/cao2_1.png",
+      "moreInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "name": "garfield",
+      "species": "cat",
+      "sex": "m",
+      "size": "medium",
+      "img": "https://uploaddeimagens.com.br/images/003/866/661/original/gato3_1.png",
+      "moreInfo": "Donec interdum ipsum eros, nec sollicitudin diam pretium in. Duis sagittis sem vel ante ultricies, laoreet ornare ipsum tincidunt.",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "name": "mitcha",
+      "species": "cat",
+      "sex": "f",
+      "size": "small",
+      "img": "https://uploaddeimagens.com.br/images/003/866/657/original/gato4_1.png",
+      "moreInfo": "Donec interdum ipsum eros, nec sollicitudin diam pretium in. Duis sagittis sem vel ante ultricies, laoreet ornare ipsum tincidunt.",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "name": "euzébio",
+      "species": "dog",
+      "sex": "m",
+      "size": "large",
+      "img": "https://uploaddeimagens.com.br/images/003/866/655/original/cao4_1.png",
+      "moreInfo": "Quisque fringilla tempus ex id mollis. Fusce eu nunc placerat, tempor quam sed, lobortis lacus. Donec interdum ipsum eros, nec sollicitudin diam pretium in. Duis sagittis sem vel ante ultricies, laoreet ornare ipsum tincidunt.",
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "name": "fofo",
+      "species": "cat",
+      "sex": "m",
+      "size": "large",
+      "img": "https://uploaddeimagens.com.br/images/003/866/652/original/gat01_1.png",
+      "moreInfo": "Quisque fringilla tempus ex id mollis. Fusce eu nunc placerat, tempor quam sed, lobortis lacus. Donec interdum ipsum eros, nec sollicitudin diam pretium in. Duis sagittis sem vel ante ultricies, laoreet ornare ipsum tincidunt.",
+      "id": 6
+    },
+    {
+      "userId": 2,
+      "name": "ninna",
+      "species": "dog",
+      "sex": "f",
+      "size": "small",
+      "img": "https://uploaddeimagens.com.br/images/003/866/649/original/cao3_1.png",
+      "moreInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac nibh ut felis scelerisque finibus sit amet in tortor. Quisque fringilla tempus ex id mollis.",
+      "id": 7
+    },
+    {
+      "userId": 2,
+      "name": "lolla",
+      "species": "cat",
+      "sex": "f",
+      "size": "small",
+      "img": "https://uploaddeimagens.com.br/images/003/866/644/original/gato2_1.png",
+      "moreInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac nibh ut felis scelerisque finibus sit amet in tortor. Quisque fringilla tempus ex id mollis.",
+      "id": 8
+    },
+    {
+      "userId": 2,
+      "name": "bolinha",
+      "species": "dog",
+      "sex": "m",
+      "size": "medium",
+      "img": "https://uploaddeimagens.com.br/images/003/866/643/original/cao5_1.png",
+      "moreInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac nibh ut felis scelerisque finibus sit amet in tortor. Quisque fringilla tempus ex id mollis. Fusce eu nunc placerat, tempor quam sed, lobortis lacus. Donec interdum ipsum eros, nec sollicitudin diam pretium in. Duis sagittis sem vel ante ultricies, laoreet ornare ipsum tincidunt.",
+      "id": 9
+    }
+  ]
 }
