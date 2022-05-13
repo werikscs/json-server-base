@@ -14,14 +14,31 @@ endpoint: /register
 
 body:
 
+se for instituição:
+
 ```
 {
-	"email": "teste@gmail.com",
-	"password": "strongestPassword",
-	"name": "João",
+	"name": "Abrigo do Norte",
+	"email": "ong@email.com",
+	"password": "12345678",
 	"phone": "22998001100",
-	"avatar": "link_img",
-	"type":"institution"
+	"type":"instituicao",
+	"cep":"28940000",
+	"moreInfo":"A instituição Abrigo do Norte foca em retirar os animais que estão morando nas ruas e prepará-los para receberem um novo lar.",
+	"avatar": "link_img"
+}
+```
+
+se for usuário comum:
+
+```
+{
+	"email": "joao@email.com",
+	"name": "João da Silva",
+	"password": "12345678",
+	"phone": "22998001100",
+	"type":"pessoa",
+	"avatar": "link_img"
 }
 ```
 
@@ -31,14 +48,16 @@ cadastrado com sucesso:<br>
 
 ```
 {
-	"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlQGdtYWlsLmNvbSIsImlhdCI6MTY1MjMwNDcwNywiZXhwIjoxNjUyMzA4MzA3LCJzdWIiOiIyIn0.5m_y34NmofYKTwfWn0J3rP0Y10rXYBfGCDffXr3moNw",
+	"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9uZ0BlbWFpbC5jb20iLCJpYXQiOjE2NTI0NTIwMjUsImV4cCI6MTY1MjQ1NTYyNSwic3ViIjoiMiJ9.u5q65gFbs7LABD1ybR7dH74RN3gdZyfk-cW9bQxvNLA",
 	"user": {
-		"email": "teste@gmail.com",
-		"name": "João",
+		"email": "ong@email.com",
+		"name": "Abrigo do Norte",
 		"phone": "22998001100",
+		"type": "instituicao",
+		"cep": "28940000",
+		"moreInfo": "A instituição Abrigo do Norte foca em retirar os animais que estão morando nas ruas e prepará-los para receberem um novo lar.",
 		"avatar": "link_img",
-		"type": "institution",
-		"id": 1
+		"id": 2
 	}
 }
 ```
@@ -61,8 +80,8 @@ body:
 
 ```
 {
-  "email": "teste@gmail.com",
-  "password": "strongestPassword"
+  "email": "joao@email.com",
+	"password": "12345678"
 }
 ```
 
@@ -72,13 +91,13 @@ logado com sucesso:<br>
 
 ```
 {
-	"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlQGdtYWlsLmNvbSIsImlhdCI6MTY1MjMwNDc4MiwiZXhwIjoxNjUyMzA4MzgyLCJzdWIiOiIyIn0.EGU1MJD-TVt-Sitr3wdE-qFIXmcLa6Kn6jqCWu0zKCU",
+	"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvYW9AZW1haWwuY29tIiwiaWF0IjoxNjUyNDU2OTUyLCJleHAiOjE2NTI0NjA1NTIsInN1YiI6IjEifQ.mggrTMya3uB6z-8g1pK96BszCk1R_jdF-x02oX78P04",
 	"user": {
-		"email": "teste@gmail.com",
-		"name": "João",
+		"email": "joao@email.com",
+		"name": "João da Silva",
 		"phone": "22998001100",
-		"avatar": "link_img",
-		"type": "institution",
+		"type": "pessoa",
+		"avatar": "",
 		"id": 1
 	}
 }
@@ -111,13 +130,24 @@ body: empty
 ```
 [
 	{
-		"email": "teste@gmail.com",
-		"password": "$2a$10$Rk9usS3xbwLo8PZyhSEoKukkHLyLK7XxIv3IdZyAiPgvNeveN9DiG",
-		"name": "João",
+		"email": "joao@email.com",
+		"password": "$2a$10$MU/9zrAw1q0HfHIdpXg1sOXMQRkMerjz5Pe.EEQbEuXu9pSoJLHTO",
+		"name": "João da Silva",
 		"phone": "22998001100",
-		"avatar": "link_img",
-		"type": "institution",
+		"type": "pessoa",
+		"avatar": "",
 		"id": 1
+	},
+	{
+		"email": "ong@email.com",
+		"password": "$2a$10$HIryiV4gLqyClQDZ3QsrZ.iSWGMkXQoBeVhCBWE2/L7H3i5c3Zg.K",
+		"name": "Abrigo do Norte",
+		"phone": "22998001100",
+		"type": "instituicao",
+		"cep": "28940000",
+		"moreInfo": "A instituição Abrigo do Norte foca em retirar os animais que estão morando nas ruas e prepará-los para receberem um novo lar.",
+		"avatar": "",
+		"id": 2
 	}
 ]
 ```
@@ -134,18 +164,18 @@ body: empty
 
 <br>**Exemplo de respostas:**
 
+exemplo de endpoint: /644/users/1
+
 se o id existe:
 
 ```
-//.../644/users/1
-
 {
-	"email": "teste@gmail.com",
-	"password": "$2a$10$Rk9usS3xbwLo8PZyhSEoKukkHLyLK7XxIv3IdZyAiPgvNeveN9DiG",
-	"name": "João",
+	"email": "joao@email.com",
+	"password": "$2a$10$MU/9zrAw1q0HfHIdpXg1sOXMQRkMerjz5Pe.EEQbEuXu9pSoJLHTO",
+	"name": "João da Silva",
 	"phone": "22998001100",
-	"avatar": "link_img",
-	"type": "institution",
+	"type": "pessoa",
+	"avatar": "",
 	"id": 1
 }
 ```
@@ -170,20 +200,22 @@ tipos possíveis: institution, person
 
 <br>**Exemplo de respostas:**
 
+exemplo de endpoint: /644/users?type=instituicao
+
 se existe algum objeto com o tipo:<br>
 
 ```
-//type=institution
-
 [
 	{
-		"email": "teste@gmail.com",
-		"password": "$2a$10$Rk9usS3xbwLo8PZyhSEoKukkHLyLK7XxIv3IdZyAiPgvNeveN9DiG",
-		"name": "João",
+		"email": "ong@email.com",
+		"password": "$2a$10$HIryiV4gLqyClQDZ3QsrZ.iSWGMkXQoBeVhCBWE2/L7H3i5c3Zg.K",
+		"name": "Abrigo do Norte",
 		"phone": "22998001100",
-		"avatar": "link_img",
-		"type": "institution",
-		"id": 1
+		"type": "instituicao",
+		"cep": "28940000",
+		"moreInfo": "A instituição Abrigo do Norte foca em retirar os animais que estão morando nas ruas e prepará-los para receberem um novo lar.",
+		"avatar": "",
+		"id": 2
 	}
 ]
 ```
@@ -207,25 +239,25 @@ authentication (bearer): token do usuário
 body:
 
 ```
-//propriedade a ser modificada
-
 {
-	"name": "João Patcheado"
+	"name": "João da Silva Souza"
 }
 ```
 
 <br>**Exemplo de respostas:**
 
+exemplo de endpoint: .../644/users/1
+
 se a propriedade existe no objeto:
 
 ```
 {
-	"email": "teste@gmail.com",
-	"password": "$2a$10$Rk9usS3xbwLo8PZyhSEoKukkHLyLK7XxIv3IdZyAiPgvNeveN9DiG",
-	"name": "João Patcheado",
+	"email": "joao@email.com",
+	"password": "$2a$10$MU/9zrAw1q0HfHIdpXg1sOXMQRkMerjz5Pe.EEQbEuXu9pSoJLHTO",
+	"name": "João da Silva Souza",
 	"phone": "22998001100",
-	"avatar": "link_img",
-	"type": "institution",
+	"type": "pessoa",
+	"avatar": "",
 	"id": 1
 }
 ```
@@ -248,12 +280,13 @@ body:
 
 ```
 {
-	"userId": 1,
-	"species": "cat",
-	"sex": "m",
-	"img":"img_link",
-	"size": "pequeno",
-	"more_info":""
+	"userId":2,
+	"name": "bolinha",
+	"species": "dog",
+	"sex":"m",
+	"size": "medium",
+	"img":"https://uploaddeimagens.com.br/images/003/866/643/original/cao5_1.png",
+	"moreInfo":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac nibh ut felis scelerisque finibus sit amet in tortor. Quisque fringilla tempus ex id mollis. Fusce eu nunc placerat, tempor quam sed, lobortis lacus. Donec interdum ipsum eros, nec sollicitudin diam pretium in. Duis sagittis sem vel ante ultricies, laoreet ornare ipsum tincidunt."
 }
 ```
 
@@ -263,13 +296,14 @@ se userId foi informado corretamente:
 
 ```
 {
-	"userId": 1,
-	"species": "cat",
+	"userId": 2,
+	"name": "bolinha",
+	"species": "dog",
 	"sex": "m",
-	"img":"img_link",
-	"size": "pequeno",
-	"more_info":"",
-	"id": 1
+	"size": "medium",
+	"img": "https://uploaddeimagens.com.br/images/003/866/643/original/cao5_1.png",
+	"moreInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac nibh ut felis scelerisque finibus sit amet in tortor. Quisque fringilla tempus ex id mollis. Fusce eu nunc placerat, tempor quam sed, lobortis lacus. Donec interdum ipsum eros, nec sollicitudin diam pretium in. Duis sagittis sem vel ante ultricies, laoreet ornare ipsum tincidunt.",
+	"id": 9
 }
 ```
 
@@ -295,13 +329,24 @@ body: empty
 [
 	{
 		"userId": 1,
-		"species": "cat",
-		"sex": "m",
-		"img":"img_link",
-		"size": "pequeno",
-		"more_info":"",
+		"name": "fiona",
+		"species": "dog",
+		"sex": "f",
+		"size": "small",
+		"img": "https://uploaddeimagens.com.br/images/003/866/666/original/cao1_1.png",
+		"moreInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac nibh ut felis scelerisque finibus sit amet in tortor. ",
 		"id": 1
-	}
+	},
+	{
+		"userId": 1,
+		"name": "maxx",
+		"species": "dog",
+		"sex": "m",
+		"size": "medium",
+		"img": "https://uploaddeimagens.com.br/images/003/866/664/original/cao2_1.png",
+		"moreInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		"id": 2
+	},
 ]
 ```
 
@@ -317,16 +362,17 @@ body: empty
 
 <br>**Exemplo de respostas:**
 
-```
-// .../644/animals/1
+exemplo de endpoint: .../644/animals/1
 
+```
 {
 	"userId": 1,
-	"species": "cat",
-	"sex": "m",
-	"img":"img_link",
-	"size": "pequeno",
-	"more_info":"",
+	"name": "fiona",
+	"species": "dog",
+	"sex": "f",
+	"size": "small",
+	"img": "https://uploaddeimagens.com.br/images/003/866/666/original/cao1_1.png",
+	"moreInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac nibh ut felis scelerisque finibus sit amet in tortor. ",
 	"id": 1
 }
 ```
@@ -345,19 +391,30 @@ body: empty
 
 <br>**Exemplo de respostas:**
 
-```
-// .../644/animals?species=cat
+exemplo de endpoint: .../644/animals?species=dog
 
+```
 [
 	{
 		"userId": 1,
-		"species": "cat",
-		"sex": "m",
-		"img":"img_link",
-		"size": "pequeno",
-		"more_info":"",
+		"name": "fiona",
+		"species": "dog",
+		"sex": "f",
+		"size": "small",
+		"img": "https://uploaddeimagens.com.br/images/003/866/666/original/cao1_1.png",
+		"moreInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac nibh ut felis scelerisque finibus sit amet in tortor. ",
 		"id": 1
-	}
+	},
+	{
+		"userId": 1,
+		"name": "maxx",
+		"species": "dog",
+		"sex": "m",
+		"size": "medium",
+		"img": "https://uploaddeimagens.com.br/images/003/866/664/original/cao2_1.png",
+		"moreInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		"id": 2
+	},
 ]
 ```
 
@@ -373,19 +430,30 @@ body: empty
 
 <br>**Exemplo de respostas:**
 
-```
-// .../644/animals?userId=1
+exemplo de endpoint: .../644/animals?userId=1
 
+```
 [
 	{
 		"userId": 1,
-		"species": "cat",
-		"sex": "m",
-		"img":"img_link",
-		"size": "pequeno",
-		"more_info":"",
+		"name": "fiona",
+		"species": "dog",
+		"sex": "f",
+		"size": "small",
+		"img": "https://uploaddeimagens.com.br/images/003/866/666/original/cao1_1.png",
+		"moreInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac nibh ut felis scelerisque finibus sit amet in tortor. ",
 		"id": 1
-	}
+	},
+	{
+		"userId": 1,
+		"name": "maxx",
+		"species": "dog",
+		"sex": "m",
+		"size": "medium",
+		"img": "https://uploaddeimagens.com.br/images/003/866/664/original/cao2_1.png",
+		"moreInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		"id": 2
+	},
 ]
 ```
 
@@ -402,27 +470,28 @@ authentication (bearer): token do usuário que cadastrou o animal
 body:
 
 ```
-//propriedade a ser modificada
-
 {
-	"img":"outro-link"
+	"name":"fionna"
 }
 ```
 
 <br>**Exemplo de respostas:**
 
+exemplo de endpoint: .../644/animals/1
+
 se a propriedade existe no objeto:
 
 ```
 {
-	"userId": 1,
-	"species": "cat",
-	"sex": "m",
-	"img": "outro-link",
-	"size": "",
-	"more_info": "",
-	"id": 1
-}
+		"userId": 1,
+		"name": "fionna",
+		"species": "dog",
+		"sex": "f",
+		"size": "small",
+		"img": "https://uploaddeimagens.com.br/images/003/866/666/original/cao1_1.png",
+		"moreInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac nibh ut felis scelerisque finibus sit amet in tortor. ",
+		"id": 1
+	},
 ```
 
 **Nota:** se a propriedade não existir, será criada uma nova propriedade com o nome e valor que foram enviados.
@@ -440,6 +509,8 @@ authentication (bearer): token do usuário que cadastrou o animal
 body: empty
 
 <br>**Exemplo de respostas:**
+
+exemplo de endpoint: ...644/animals/1
 
 se o id e token estiverem corretos:
 
