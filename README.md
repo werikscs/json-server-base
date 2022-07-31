@@ -1,5 +1,12 @@
 # **Adopet API**
 
+Essa apliação foi elaborada para atuar como o back-end do projeto [Adopet](https://github.com/werikscs/capstone-m3). Foi criada utilizando as seguintes bibliotecas:
+
+- [JSON Server](https://www.npmjs.com/package/json-server)
+  - Simula diversas funcionalidades de uma REST API de forma prática.
+- [JSON Server Auth](https://www.npmjs.com/package/json-server-auth)
+  - Simula um middleware de autenticação para o JSON Server.
+
 ## **Base Url**: https://adopet-api-cm3.herokuapp.com
 
 ---
